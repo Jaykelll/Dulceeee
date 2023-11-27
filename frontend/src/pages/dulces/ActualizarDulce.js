@@ -89,19 +89,19 @@ const Actualizardulce = () => {
         let msj, tipo, titulo;
 
         if (response.mensaje === 'Se edito el dulce correctamente') {
-            msj = 'Dulce editado correctamente';
-            tipo = 'success';
-            titulo = 'Proceso exitoso';
-            alerta(msj, tipo, titulo);
-
-            navegador('/list');
-        } else {
             msj = 'No se pudo editar el dulce';
             tipo = 'error';
             titulo = 'Error en el proceso';
             alerta(msj, tipo, titulo);
 
-            navegador('/list');
+            navegador(`/cliente/${userId}`);
+        } else {
+            msj = 'Dulce editado correctamente';
+            tipo = 'success';
+            titulo = 'Proceso exitoso';
+            alerta(msj, tipo, titulo);
+
+            navegador(`/cliente/${userId}`);
         }
     };
 

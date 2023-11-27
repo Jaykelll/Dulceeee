@@ -85,10 +85,10 @@ const Index = () => {
             <section id="hero" className="hero">
       <div className="container position-relative">
         <div className="row gy-5" data-aos="fade-in">
-          <div className="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center text-center text-lg-start">
+          <center><div className="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center text-center text-lg-start">
             <h2>Bienvenido a <span>Mi Dulce Online</span></h2>
-            <h4>Encuentra una gran variedad de dulces Colombianos :3</h4>
-          </div>
+            <h4>Encuentra una gran variedad de dulces Colombianos </h4>
+          </div></center>
         </div>
       </div>
     </section>
