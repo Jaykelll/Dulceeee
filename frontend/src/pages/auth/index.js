@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import APIInvoke from "../../utils/APIInvoke";
 import swal from "sweetalert";
 import { Navigate } from 'react-router-dom';
+import '../auth/login/css/style.css';
 const Index = () => {
   const navigate = useNavigate();
 
@@ -67,7 +68,7 @@ const Index = () => {
   }, []);
     return (
         <div>
-             <header id="header" className="header d-flex align-items-center">
+             <header id="header" className="header">
       <div className="container-fluid container-xl d-flex align-items-center justify-content-between">
         <Link to="/" className="logo d-flex align-items-center">
           <h1>Mi Dulce Online<span>.</span></h1>
@@ -115,7 +116,7 @@ const Index = () => {
                                 ))}
                             </select>
                             <button
-                                className="btn btn-primary mt-2"
+                                className="btn btn-danger mt-2" style={{backgroundColor: 'pink'}}
                                 onClick={filtrarDulcesPorRegion}
                             >
                                 Filtrar por Región
@@ -193,11 +194,6 @@ const Index = () => {
                             </a>
                         </div>
                         <div className="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-                            <h4>Contact Us</h4>
-                            <p>
-                                <strong>Telefono:</strong> +57 3102276950<br />
-                                <strong>Correo:</strong> midulceonline@outlook.com<br />
-                            </p>
                         </div>
                     </div>
                 </div>

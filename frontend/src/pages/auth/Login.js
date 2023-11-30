@@ -80,7 +80,7 @@ const Login = () => {
     };
 
     return (
-        <section className="ftco-section">
+        <section className="ftco-section body">
             <div className="container">
                 <div className="row justify-content-center">
                     <div className="col-md-12 col-lg-10">
