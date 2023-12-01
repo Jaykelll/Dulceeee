@@ -122,7 +122,7 @@ const Actualizardulce = () => {
             <header id="header" className="header d-flex align-items-center">
                 <div className="container-fluid container-xl d-flex align-items-center justify-content-between">
                     <Link to="/admin" className="logo d-flex align-items-center">
-                        <h1>Mi Dulce Online<span>.</span></h1>
+                        <h1>Mi Dulce Online<span>🍬</span></h1>
                     </Link>
                     <nav id="navbar" className="navbar">
                         <ul>
@@ -253,11 +253,6 @@ const Actualizardulce = () => {
           </a>
         </div>
         <div className="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-          <h4>Contact Us</h4>
-          <p>
-            <strong>Telefono:</strong> +57 3102276950<br />
-            <strong>Correo:</strong> midulceonline@outlook.com<br />
-          </p>
         </div>
       </div>
     </div>

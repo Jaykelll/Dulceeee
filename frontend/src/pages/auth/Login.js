@@ -87,8 +87,8 @@ const Login = () => {
                         <div className="wrap d-md-flex">
                             <div className="text-wrap p-4 p-lg-5 text-center d-flex align-items-center order-md-last">
                                 <div className="text w-100">
-                                    <h2>Bienvenido a Mi Dulce Online</h2>
-                                    <p>¿No tienes una cuenta?</p>
+                                    <h2>Bienvenido a Mi Dulce Online 🍬</h2>
+                                    <p>Si no tienes cuenta presiona registrar</p>
                                     <Link
                                         to="/registrar"
                                         className="btn btn-white btn-outline-white"

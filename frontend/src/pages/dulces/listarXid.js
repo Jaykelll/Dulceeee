@@ -80,9 +80,7 @@ const ListadulcesId = () => {
       <header id="header" className="header d-flex align-items-center">
         <div className="container-fluid container-xl d-flex align-items-center justify-content-between">
           <Link to="/admin" className="logo d-flex align-items-center">
-            <h1>
-              Mi Dulce Online<span>.</span>
-            </h1>
+          <h1>Mi Dulce Online<span>🍬</span></h1>
           </Link>
           <nav id="navbar" className="navbar">
             <ul>
@@ -140,13 +138,13 @@ const ListadulcesId = () => {
                         </td>
                         <td>
                           <Link
-                            className="btn btn-outline-success mx-3"
+                            className="btn btn-danger mx-3" 
                             to={`/actualizar/${item._id}`}
                           >
                             Actualizar
                           </Link>
                           <button
-                            className="btn btn-outline-secondary"
+                            className="btn bg-white"
                             onClick={(e) => eliminarDulce(e, item._id)}
                           >
                             Eliminar

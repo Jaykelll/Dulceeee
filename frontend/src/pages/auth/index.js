@@ -71,7 +71,7 @@ const Index = () => {
              <header id="header" className="header">
       <div className="container-fluid container-xl d-flex align-items-center justify-content-between">
         <Link to="/" className="logo d-flex align-items-center">
-          <h1>Mi Dulce Online<span>.</span></h1>
+          <h1>Mi Dulce Online<span>🍬</span></h1>
         </Link>
         <nav id="navbar" className="navbar">
           <ul>
@@ -87,8 +87,8 @@ const Index = () => {
       <div className="container position-relative">
         <div className="row gy-5" data-aos="fade-in">
           <center><div className="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center text-center text-lg-start">
-            <h2>Bienvenido a <span>Mi Dulce Online</span></h2>
-            <h4>Encuentra una gran variedad de dulces Colombianos </h4>
+            <h2>Hola te presento a<span>Mi Dulce Online</span></h2>
+            <h4>La pagina con la mayor variedad de dulces tipicos de Colombia </h4>
           </div></center>
         </div>
       </div>
@@ -190,7 +190,7 @@ const Index = () => {
                     <div className="row gy-4">
                         <div className="col-lg-5 col-md-12 footer-info">
                             <a href="/admin" className="logo d-flex align-items-center">
-                                <span>Mi Dulce Online</span>
+                                <span>Mi Dulce Online 🍭</span>
                             </a>
                         </div>
                         <div className="col-lg-3 col-md-12 footer-contact text-center text-md-start">
@@ -199,7 +199,7 @@ const Index = () => {
                 </div>
                 <div className="container mt-4">
                     <div className="copyright">
-                        © Copyright <strong><span>MiDulceOnline</span></strong>. Derechos Reservados
+                        © Copyright <strong><span>MiDulceOnline 🍭</span></strong>. Derechos Reservados
                     </div>
                 </div>
             </footer>

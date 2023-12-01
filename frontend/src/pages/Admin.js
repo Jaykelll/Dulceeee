@@ -17,7 +17,7 @@ const Admin = () => {
     <header id="header" className="header d-flex align-items-center">
       <div className="container-fluid container-xl d-flex align-items-center justify-content-between">
         <Link to="/admin" className="logo d-flex align-items-center">
-          <h1>Mi Dulce Online<span>.</span></h1>
+          <h1>Mi Dulce Online<span>🍬</span></h1>
         </Link>
         <nav id="navbar" className="navbar">
           <ul>
@@ -40,22 +40,26 @@ const Admin = () => {
         <div className="container position-relative">
           <div className="row gy-4 mt-5">
             <div className="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay={100}>
-              <div className="icon-box">
-                <div className="icon"><i className="bi bi-easel" /></div>
-                <h4 className="title"><Link to="/crear">¿Quieres empezar a vender tus dulces? Hazlo aqui</Link></h4>
-              </div>
+
+            <Link to="/crear">
+  <button type="submit" className="form-control btn btn-primary submit px-3" style={{backgroundColor: 'purple'}}>
+    Presiona aqui para vender tus dulces 😊😊
+  </button>
+</Link>
             </div>{/*End Icon Box */}
             <div className="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay={200}>
-              <div className="icon-box">
-                <div className="icon"><i className="bi bi-gem" /></div>
-                <h4 className="title"><Link to={`/cliente/${userId}`}>Ve los productos que estas vendiendo</Link></h4>
-              </div>
+            <Link to="/crear">
+  <button type="submit" className="form-control btn btn-primary submit px-3" style={{backgroundColor: 'purple'}}>
+    Da click para ver los productos que vendes 🍭
+  </button>
+</Link>
             </div>{/*End Icon Box */}
             <div className="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay={200}>
-              <div className="icon-box">
-                <div className="icon"><i className="bi bi-gem" /></div>
-                <h4 className="title"><Link to="/catalogo">Catalogo de dulces</Link></h4>
-              </div>
+            <Link to={'/catalogo'}>
+  <button type="submit" className="form-control btn btn-primary submit px-3" style={{backgroundColor: 'purple'}}>
+    Observa tu catalogo de dulces 🍬
+  </button>
+</Link>
             </div>{/*End Icon Box */}
 
           </div>

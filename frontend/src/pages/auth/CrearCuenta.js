@@ -104,10 +104,10 @@ const CrearCuenta = () => {
                         <div className="wrap d-md-flex">
                             <div className="text-wrap p-4 p-lg-5 text-center d-flex align-items-center order-md-last">
                                 <div className="text w-100">
-                                    <h2>Bienvenido a Mi Dulce Online</h2>
-                                    <p>¿Ya tienes una cuenta?</p>
+                                    <h2>Bienvenido a Mi Dulce Online 🍬</h2>
+                                    <p>Usa tu cuenta 😊</p>
                                     <Link to="/login" className="btn btn-white btn-outline-white">
-                                        Inicia Sesion
+                                        Iniciar Sesión
                                     </Link>
                                 </div>
                             </div>

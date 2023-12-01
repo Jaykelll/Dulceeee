@@ -19,32 +19,9 @@
 
 /* Colors */
 :root {
-  --color-default: #222222; 
-  --color-primary: #008374;
-  --color-secondary: #f35587;
-}
-
-/* Smooth scroll behavior */
-:root {
-  scroll-behavior: smooth;
-}
-
-/*--------------------------------------------------------------
-# General
---------------------------------------------------------------*/
-body {
-  font-family: var(--font-default);
-  color: var(--color-default);
-}
-
-a {
-  color: var(--color-primary);
-  text-decoration: none;
-}
-
-a:hover {
-  color: #00b6a1;
-  text-decoration: none;
+  --color-default: #edf5fc; /* Fondo más claro */
+  --color-primary: #0a4a8e; /* Azul primario oscuro */
+  --color-secondary: #4fa3d1; /* Azul secundario más claro */
 }
 
 h1,
@@ -54,6 +31,7 @@ h4,
 h5,
 h6 {
   font-family: var(--font-primary);
+  color: var(--color-primary); /* Cambiado el color de texto a azul primario */
 }
 
 /*--------------------------------------------------------------
@@ -62,10 +40,11 @@ h6 {
 section {
   padding: 60px 0;
   overflow: hidden;
+  background-color: var(--color-default); /* Cambiado el color de fondo de las secciones */
 }
 
 .sections-bg {
-  background-color: #f6f6f6;
+  background-color: #f0f0f0; /* Color de fondo más claro para contrastar */
 }
 
 .section-header {
@@ -79,6 +58,7 @@ section {
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
+  color: var(--color-primary); /* Cambiado el color del título a azul primario */
 }
 
 .section-header h2:after {
@@ -87,7 +67,7 @@ section {
   display: block;
   width: 50px;
   height: 3px;
-  background: #f35587;
+  background: var(--color-secondary); /* Cambiado el color del subrayado a azul secundario */
   left: 0;
   right: 0;
   bottom: 0;
@@ -96,7 +76,7 @@ section {
 
 .section-header p {
   margin-bottom: 0;
-  color: #6f6f6f;
+  color: #ff0000; /* Cambiado el color del texto a un tono más oscuro */
 }
 
 /*--------------------------------------------------------------
@@ -106,7 +86,7 @@ section {
   padding: 60px 0 60px 0;
   min-height: 20vh;
   position: relative;
-  background-color: var(--color-primary);
+  background-color: var(--color-primary); /* Cambiado el color de fondo a azul primario */
 }
 
 .breadcrumbs .page-header h2 {
@@ -121,39 +101,41 @@ section {
 }
 
 .breadcrumbs nav {
-  background-color: #f6f6f6;
+  background-color: var(--color-default); /* Cambiado el color de fondo de la navegación a azul secundario */
   padding: 20px 0;
 }
 
+/* Breadcrumbs Navigation */
 .breadcrumbs nav ol {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
   margin: 0;
-  padding: 0;
-  font-size: 16px;
-  font-weight: 600;
-  color: var(--color-default);
+  padding: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  background-color: var(--color-secondary); /* Fondo de navegación en azul secundario */
+  border-radius: 8px; /* Bordes redondeados */
 }
 
 .breadcrumbs nav ol a {
-  color: var(--color-primary);
+  color: #fff; /* Texto en color blanco */
   transition: 0.3s;
 }
 
 .breadcrumbs nav ol a:hover {
-  text-decoration: underline;
+  text-decoration: none; /* Quita el subrayado al hacer hover */
+  font-weight: 600; /* Aumenta el peso de la fuente en hover */
 }
 
 .breadcrumbs nav ol li+li {
-  padding-left: 10px;
+  margin-left: 10px; /* Añade espacio entre elementos de navegación */
 }
 
 .breadcrumbs nav ol li+li::before {
-  display: inline-block;
-  padding-right: 10px;
-  color: var(--color-secondary);
-  content: "/";
+  content: "»"; /* Utiliza un símbolo diferente como separador */
+  margin-right: 10px;
+  color: var(--color-default); /* Color de separador en fondo más claro */
 }
 
 /*--------------------------------------------------------------
@@ -163,31 +145,33 @@ section {
   position: fixed;
   visibility: hidden;
   opacity: 0;
-  right: 15px;
-  bottom: -15px;
+  right: 20px;
+  bottom: 20px;
   z-index: 99999;
-  background: var(--color-secondary);
-  width: 44px;
-  height: 44px;
-  border-radius: 50px;
+  background: var(--color-primary); /* Botón de scroll en azul primario */
+  width: 50px;
+  height: 50px;
+  border-radius: 25px; /* Hace el botón más redondo */
   transition: all 0.4s;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Añade sombra al botón */
 }
 
 .scroll-top i {
   font-size: 24px;
   color: #fff;
-  line-height: 0;
+  line-height: 50px; /* Centra el ícono verticalmente */
 }
 
 .scroll-top:hover {
-  background: rgba(248, 90, 64, 0.8);
+  background: rgba(64, 205, 248, 0.8);
   color: #fff;
 }
 
+/* Scroll Top Button */
 .scroll-top.active {
   visibility: visible;
   opacity: 1;
-  bottom: 15px;
+  bottom: 10px; /* Ajusta la posición en estado activo */
 }
 
 /*--------------------------------------------------------------
@@ -198,16 +182,16 @@ section {
   inset: 0;
   z-index: 999999;
   overflow: hidden;
-  background: #fff;
+  background: var(--color-default); /* Fondo del preloader en color por defecto */
   transition: all 0.6s ease-out;
 }
 
 #preloader:before {
   content: "";
   position: fixed;
-  top: calc(50% - 30px);
-  left: calc(50% - 30px);
-  border: 6px solid #fff;
+  top: 50%;
+  left: 50%;
+  border: 6px solid var(--color-default); /* Borde del preloader en color por defecto */
   border-color: var(--color-primary) transparent var(--color-primary) transparent;
   border-radius: 50%;
   width: 60px;
@@ -217,11 +201,11 @@ section {
 
 @keyframes animate-preloader {
   0% {
-    transform: rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg);
   }
 
   100% {
-    transform: rotate(360deg);
+    transform: translate(-50%, -50%) rotate(360deg);
   }
 }
 
@@ -238,7 +222,7 @@ section {
 # Header
 --------------------------------------------------------------*/
 .topbar {
-  background: #00796b;
+  background: var(--color-primary); /* Cambiado el color de fondo a azul primario */
   height: 40px;
   font-size: 14px;
   transition: all 0.5s;
@@ -259,7 +243,6 @@ section {
 }
 
 @media (max-width: 575px) {
-
   .topbar .contact-info i a,
   .topbar .contact-info i span {
     font-size: 13px;
@@ -291,7 +274,7 @@ section {
   transition: all 0.5s;
   z-index: 997;
   height: 90px;
-  background-color: #fff;
+  background-color: var(--color-default); /* Cambiado el color de fondo del header a color por defecto */
 }
 
 .header.sticked {
@@ -301,6 +284,7 @@ section {
   left: 0;
   height: 70px;
   box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
+  background-color: #fff; /* Añadido color de fondo blanco al header en estado pegajoso */
 }
 
 .header .logo img {
@@ -313,12 +297,12 @@ section {
   margin: 0;
   font-weight: 600;
   letter-spacing: 0.8px;
-  color: #000000;
+  color: var(--color-primary); /* Cambiado el color del texto a azul primario */
   font-family: var(--font-primary);
 }
 
 .header .logo h1 span {
-  color: #f96f59;
+  color: var(--color-secondary); /* Cambiado el color del span a azul secundario */
 }
 
 .sticked-header-offset {
@@ -328,13 +312,14 @@ section {
 section {
   scroll-margin-top: 70px;
 }
-
 /*--------------------------------------------------------------
 # Desktop Navigation
 --------------------------------------------------------------*/
 @media (min-width: 1280px) {
   .navbar {
     padding: 0;
+    background-color: #fff; /* Fondo blanco */
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
   }
 
   .navbar ul {
@@ -363,7 +348,7 @@ section {
     font-family: var(--font-secondary);
     font-size: 16px;
     font-weight: 600;
-    color: rgba(0, 0, 0, 0.6);
+    color: #001f3f; /* Azul oscuro */
     white-space: nowrap;
     transition: 0.3s;
     position: relative;
@@ -383,7 +368,7 @@ section {
     height: 2px;
     bottom: -6px;
     left: 0;
-    background-color: var(--color-secondary);
+    background-color: #79b4d6; /* Azul primario */
     visibility: hidden;
     width: 0px;
     transition: all 0.3s ease-in-out 0s;
@@ -400,7 +385,7 @@ section {
   .navbar .active,
   .navbar .active:focus,
   .navbar li:hover>a {
-    color: #f35587;
+    color: #3498db; /* Azul claro */
   }
 
   .navbar .dropdown ul {
@@ -414,7 +399,7 @@ section {
     opacity: 0;
     visibility: hidden;
     background: #fff;
-    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+    box-shadow: 0px 0px 30px rgb(0, 76, 255);
     transition: 0.3s;
     border-radius: 4px;
   }
@@ -428,7 +413,7 @@ section {
     font-size: 15px;
     text-transform: none;
     font-weight: 600;
-    color: #006a5d;
+    color: #005580; /* Azul más oscuro para el dropdown */
   }
 
   .navbar .dropdown ul a i {
@@ -438,7 +423,7 @@ section {
   .navbar .dropdown ul a:hover,
   .navbar .dropdown ul .active:hover,
   .navbar .dropdown ul li:hover>a {
-    color: var(--color-secondary);
+    color: #0074b9; /* Azul primario para el dropdown */
   }
 
   .navbar .dropdown:hover>ul {
@@ -492,6 +477,7 @@ section {
     bottom: 0;
     transition: 0.3s;
     z-index: 9997;
+    background: rgb(255, 0, 0); /* Azul oscuro */
   }
 
   .navbar ul {
@@ -499,7 +485,7 @@ section {
     inset: 0;
     padding: 50px 0 10px 0;
     margin: 0;
-    background: rgba(0, 131, 116, 0.9);
+    background: rgba(253, 2, 2, 0.9);
     overflow-y: auto;
     transition: 0.3s;
     z-index: 9998;
@@ -514,7 +500,7 @@ section {
     font-family: var(--font-primary);
     font-size: 15px;
     font-weight: 600;
-    color: rgba(255, 255, 255, 0.7);
+    color: #fff; /* Blanco */
     white-space: nowrap;
     transition: 0.3s;
   }
@@ -530,12 +516,12 @@ section {
   .navbar .active,
   .navbar .active:focus,
   .navbar li:hover>a {
-    color: #fff;
+    color: #3498db; /* Azul claro */
   }
 
   .navbar .getstarted,
   .navbar .getstarted:focus {
-    background: var(--color-primary);
+    background: #0074b9; /* Azul primario */
     padding: 8px 20px;
     border-radius: 4px;
     margin: 15px;
@@ -545,7 +531,7 @@ section {
   .navbar .getstarted:hover,
   .navbar .getstarted:focus:hover {
     color: #fff;
-    background: rgba(0, 131, 116, 0.8);
+    background: rgba(0, 255, 225, 0.8)
   }
 
   .navbar .dropdown ul,
@@ -555,8 +541,8 @@ section {
     padding: 10px 0;
     margin: 10px 20px;
     transition: all 0.5s ease-in-out;
-    background-color: #007466;
-    border: 1px solid #006459;
+    background-color: #ff0303;
+    border: 1px solid #ff0000;
   }
 
   .navbar .dropdown>.dropdown-active,
@@ -598,7 +584,7 @@ section {
     content: "";
     position: fixed;
     inset: 0;
-    background: rgba(0, 106, 93, 0.8);
+    background: rgba(106, 0, 0, 0.8);
     z-index: 9996;
   }
 }
@@ -611,6 +597,7 @@ section {
   font-size: 28px;
   margin-bottom: 20px;
   font-family: var(--font-secondary);
+  color: #001f3f; /* Azul oscuro */
 }
 
 .about .call-us {
@@ -627,12 +614,13 @@ section {
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 5px;
+  color: #001f3f; /* Azul oscuro */
 }
 
 .about .call-us p {
   font-size: 28px;
   font-weight: 700;
-  color: var(--color-primary);
+  color: #3498db; /* Azul claro */
 }
 
 .about .content ul {
@@ -650,7 +638,7 @@ section {
   font-size: 20px;
   left: 0;
   top: -3px;
-  color: var(--color-primary);
+  color: #3498db; /* Azul claro */
 }
 
 .about .content p:last-child {
@@ -660,7 +648,7 @@ section {
 .about .play-btn {
   width: 94px;
   height: 94px;
-  background: radial-gradient(var(--color-primary) 50%, rgba(0, 131, 116, 0.4) 52%);
+  background: radial-gradient(#3498db 50%, rgba(2, 255, 225, 0.4) 52%); /* Azul claro */
   border-radius: 50%;
   display: block;
   position: absolute;
@@ -681,7 +669,7 @@ section {
   animation-timing-function: steps;
   opacity: 1;
   border-radius: 50%;
-  border: 5px solid rgba(0, 131, 116, 0.7);
+  border: 5px solid rgba(0, 255, 225, 0.7);
   top: -15%;
   left: -15%;
   background: rgba(198, 16, 0, 0);
@@ -720,7 +708,7 @@ section {
 }
 
 .about .play-btn:hover:after {
-  border-left: 15px solid var(--color-primary);
+  border-left: 15px solid #3498db; /* Azul claro */
   transform: scale(20);
 }
 
@@ -793,6 +781,7 @@ section {
   font-size: 44px;
   line-height: 0;
   margin-right: 15px;
+  color: var(--color-primary); /* Color primario, puedes cambiarlo según tu paleta */
 }
 
 .stats-counter .stats-item span {
@@ -807,7 +796,9 @@ section {
   margin: 0;
   font-family: var(--font-primary);
   font-size: 14px;
+  color: #555; /* Color de texto, puedes ajustarlo según tu diseño */
 }
+
 
 /*--------------------------------------------------------------
 # Call To Action Section
@@ -836,7 +827,7 @@ section {
   width: 94px;
   height: 94px;
   margin-bottom: 20px;
-  background: radial-gradient(var(--color-primary) 50%, rgba(0, 131, 116, 0.4) 52%);
+  background: radial-gradient(var(--color-primary) 50%, rgba(0, 9, 131, 0.4) 52%);
   border-radius: 50%;
   display: inline-block;
   position: relative;
@@ -855,7 +846,7 @@ section {
   animation-timing-function: steps;
   opacity: 1;
   border-radius: 50%;
-  border: 5px solid rgba(0, 131, 116, 0.7);
+  border: 5px solid rgba(0, 72, 131, 0.7);
   top: -15%;
   left: -15%;
   background: rgba(198, 16, 0, 0);
@@ -1003,6 +994,7 @@ section {
   border-color: var(--color-primary);
 }
 
+
 /*--------------------------------------------------------------
 # Testimonials Section
 --------------------------------------------------------------*/
@@ -1044,7 +1036,7 @@ section {
 }
 
 .testimonials .testimonial-item .stars i {
-  color: #ffc107;
+  color: #07ffea;
   margin: 0 1px;
 }
 
@@ -1238,7 +1230,6 @@ section {
 }
 
 @media (max-width: 575px) {
-
   .portfolio-details .swiper-button-prev,
   .portfolio-details .swiper-button-next {
     display: none;
@@ -1293,7 +1284,7 @@ section {
 }
 
 .portfolio-details .portfolio-info .btn-visit:hover {
-  background: #009d8b;
+  background: #9d0000;
 }
 
 .portfolio-details .portfolio-description h2 {
@@ -1388,6 +1379,7 @@ section {
   margin-top: 16px;
   margin-bottom: 2px;
   font-size: 20px;
+  color: var(--color-primary); /* Updated color to use the primary color */
 }
 
 .team .member span {
@@ -1438,109 +1430,109 @@ section {
 # Pricing Section
 --------------------------------------------------------------*/
 .pricing .pricing-item {
-  padding: 60px 40px;
-  box-shadow: 0 3px 20px -2px rgba(108, 117, 125, 0.15);
-  background: #fff;
+  padding: 40px 30px; /* Updated padding */
+  box-shadow: 0 5px 25px -5px rgba(108, 117, 125, 0.1); /* Updated box-shadow */
+  background: #f7f7f7; /* Updated background color */
   height: 100%;
   position: relative;
-  border-radius: 15px;
+  border-radius: 20px; /* Updated border-radius */
 }
 
 .pricing h3 {
-  font-weight: 600;
-  margin-bottom: 15px;
-  font-size: 20px;
-  color: #555555;
+  font-weight: 500; /* Updated font-weight */
+  margin-bottom: 20px; /* Updated margin */
+  font-size: 22px; /* Updated font-size */
+  color: #ff0000; /* Updated text color */
   text-align: center;
 }
 
 .pricing .icon {
-  margin: 30px auto 30px auto;
-  width: 70px;
-  height: 70px;
-  background: var(--color-primary);
-  border-radius: 50%;
+  margin: 20px auto 30px auto; /* Updated margin */
+  width: 60px; /* Updated width */
+  height: 60px; /* Updated height */
+  background: var(--color-accent); /* Updated background color */
+  border-radius: 40%; /* Updated border-radius */
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: 0.3s;
+  transition: 0.4s; /* Updated transition duration */
   transform-style: preserve-3d;
 }
 
 .pricing .icon i {
   color: #fff;
-  font-size: 28px;
-  transition: ease-in-out 0.3s;
+  font-size: 24px; /* Updated font-size */
+  transition: ease-in-out 0.4s; /* Updated transition duration */
   line-height: 0;
 }
 
 .pricing .icon::before {
   position: absolute;
   content: "";
-  height: 86px;
-  width: 86px;
-  border-radius: 50%;
-  background: #87c1bb;
-  transition: all 0.3s ease-out 0s;
+  height: 76px; /* Updated height */
+  width: 76px; /* Updated width */
+  border-radius: 40%; /* Updated border-radius */
+  background: #ddd; /* Updated background color */
+  transition: all 0.4s ease-out 0s;
   transform: translateZ(-1px);
 }
 
 .pricing .icon::after {
   position: absolute;
   content: "";
-  height: 102px;
-  width: 102px;
-  border-radius: 50%;
-  background: #d2eeeb;
-  transition: all 0.3s ease-out 0s;
+  height: 90px; /* Updated height */
+  width: 90px; /* Updated width */
+  border-radius: 40%; /* Updated border-radius */
+  background: #eee; /* Updated background color */
+  transition: all 0.4s ease-out 0s;
   transform: translateZ(-2px);
 }
 
 .pricing h4 {
-  font-size: 48px;
-  color: var(--color-secondary);
-  font-weight: 700;
+  font-size: 36px; /* Updated font-size */
+  color: var(--color-primary); /* Updated text color */
+  font-weight: 600; /* Updated font-weight */
   font-family: var(--font-secondary);
-  margin-bottom: 0;
+  margin-bottom: 10px; /* Updated margin */
   text-align: center;
 }
 
 .pricing h4 sup {
-  font-size: 28px;
+  font-size: 20px; /* Updated font-size */
 }
 
 .pricing h4 span {
-  color: rgba(108, 117, 125, 0.8);
-  font-size: 18px;
-  font-weight: 400;
+  color: rgba(108, 117, 125, 0.7); /* Updated text color */
+  font-size: 16px; /* Updated font-size */
+  font-weight: 500; /* Updated font-weight */
 }
 
 .pricing ul {
-  padding: 20px 0;
+  padding: 15px 0; /* Updated padding */
   list-style: none;
-  color: #6c757d;
-  text-align: left;
-  line-height: 20px;
+  color: #fc0000; /* Updated text color */
+  text-align: center;
+  line-height: 18px; /* Updated line-height */
 }
 
 .pricing ul li {
-  padding: 10px 0;
+  padding: 8px 0; /* Updated padding */
   display: flex;
   align-items: center;
 }
 
 .pricing ul i {
-  color: #059652;
-  font-size: 24px;
-  padding-right: 3px;
+  color: #02fff7; /* Updated color */
+  font-size: 18px;
+  padding-right: 5px; /* Updated padding */
 }
 
 .pricing ul .na {
-  color: rgba(108, 117, 125, 0.5);
+  color: rgba(108, 117, 125, 0.6); /* Updated text color */
 }
 
 .pricing ul .na i {
-  color: rgba(108, 117, 125, 0.5);
+  color: rgba(108, 117, 125, 0.6); /* Updated color */
 }
 
 .pricing ul .na span {
@@ -1549,57 +1541,59 @@ section {
 
 .pricing .buy-btn {
   display: inline-block;
-  padding: 10px 40px;
-  border-radius: 50px;
-  color: var(--color-primary);
-  border: 1px solid rgba(0, 131, 116, 0.2);
-  transition: none;
-  font-size: 16px;
+  padding: 12px 32px; /* Updated padding */
+  border-radius: 40px; /* Updated border-radius */
+  color: #fff;
+  background: var(--color-primary); /* Updated background color */
+  border: 1px solid rgba(131, 0, 0, 0.2);
+  transition: 0.4s; /* Updated transition duration */
+  font-size: 18px; /* Updated font-size */
   font-weight: 600;
   font-family: var(--font-primary);
-  transition: 0.3s;
+  margin: 15px 0; /* Updated margin */
 }
 
 .pricing .buy-btn:hover {
-  background: var(--color-primary);
+  background: #9d0000; /* Updated background color */
   color: #fff;
 }
 
 .pricing .featured {
   z-index: 10;
-  border: 3px solid var(--color-primary);
+  border: 4px solid var(--color-primary); /* Updated border size and color */
 }
 
 @media (min-width: 992px) {
   .pricing .featured {
-    transform: scale(1.15);
+    transform: scale(1.2); /* Updated scale */
   }
 }
-
 /*--------------------------------------------------------------
 # Frequently Asked Questions Section
 --------------------------------------------------------------*/
 .faq .content h3 {
-  font-weight: 400;
-  font-size: 34px;
+  font-weight: 500; /* Updated font-weight */
+  font-size: 32px; /* Updated font-size */
+  color: var(--color-primary); /* Updated text color */
 }
 
 .faq .content h4 {
-  font-size: 20px;
-  font-weight: 700;
-  margin-top: 5px;
+  font-size: 18px; /* Updated font-size */
+  font-weight: 600; /* Updated font-weight */
+  margin-top: 10px; /* Updated margin-top */
+  color: #ff0000; /* Updated text color */
 }
 
 .faq .content p {
-  font-size: 15px;
-  color: #6c757d;
+  font-size: 16px; /* Updated font-size */
+  color: #c00202; /* Updated text color */
 }
 
 .faq .accordion-item {
-  border: 0;
-  margin-bottom: 20px;
-  box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.06);
-  border-radius: 10px;
+  border: 1px solid #eee; /* Updated border */
+  margin-bottom: 25px; /* Updated margin-bottom */
+  box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.1); /* Updated box-shadow */
+  border-radius: 15px; /* Updated border-radius */
 }
 
 .faq .accordion-item:last-child {
@@ -1607,32 +1601,32 @@ section {
 }
 
 .faq .accordion-collapse {
-  border: 0;
+  border: 1px solid #eee; /* Updated border */
 }
 
 .faq .accordion-button {
-  padding: 20px 50px 20px 20px;
+  padding: 20px 40px 20px 20px; /* Updated padding */
   font-weight: 600;
   border: 0;
-  font-size: 18px;
-  line-height: 24px;
-  color: var(--color-default);
+  font-size: 16px; /* Updated font-size */
+  line-height: 22px; /* Updated line-height */
+  color: var(--color-secondary); /* Updated text color */
   text-align: left;
   background: #fff;
   box-shadow: none;
-  border-radius: 10px;
+  border-radius: 15px; /* Updated border-radius */
 }
 
 .faq .accordion-button .num {
-  padding-right: 10px;
-  font-size: 20px;
+  padding-right: 15px; /* Updated padding-right */
+  font-size: 18px; /* Updated font-size */
   line-height: 0;
   color: var(--color-primary);
 }
 
 .faq .accordion-button:not(.collapsed) {
   color: var(--color-primary);
-  border-bottom: 0;
+  border-bottom: 1px solid #eee; /* Updated border-bottom */
   box-shadow: none;
 }
 
@@ -1643,9 +1637,9 @@ section {
 }
 
 .faq .accordion-body {
-  padding: 0 40px 30px 45px;
-  border: 0;
-  border-radius: 10px;
+  padding: 0 30px 20px 30px; /* Updated padding */
+  border: 1px solid #eee; /* Updated border */
+  border-radius: 15px; /* Updated border-radius */
   background: #fff;
   box-shadow: none;
 }
@@ -1654,35 +1648,35 @@ section {
 # Recent Blog Posts Section
 --------------------------------------------------------------*/
 .recent-posts article {
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
-  padding: 30px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1); /* Updated box-shadow */
+  background-color: #f9f9f9; /* Updated background-color */
+  padding: 25px; /* Updated padding */
   height: 100%;
-  border-radius: 10px;
+  border-radius: 12px; /* Updated border-radius */
   overflow: hidden;
 }
 
 .recent-posts .post-img {
-  max-height: 240px;
-  margin: -30px -30px 15px -30px;
+  max-height: 220px; /* Updated max-height */
+  margin: -20px -20px 15px -20px; /* Updated margin */
   overflow: hidden;
 }
 
 .recent-posts .post-category {
-  font-size: 16px;
-  color: #6f6f6f;
-  margin-bottom: 10px;
+  font-size: 14px; /* Updated font-size */
+  color: #888; /* Updated text color */
+  margin-bottom: 8px; /* Updated margin-bottom */
 }
 
 .recent-posts .title {
-  font-size: 22px;
+  font-size: 20px; /* Updated font-size */
   font-weight: 700;
   padding: 0;
-  margin: 0 0 20px 0;
+  margin: 0 0 15px 0; /* Updated margin-bottom */
 }
 
 .recent-posts .title a {
-  color: var(--color-default);
+  color: var(--color-secondary); /* Updated text color */
   transition: 0.3s;
 }
 
@@ -1691,22 +1685,21 @@ section {
 }
 
 .recent-posts .post-author-img {
-  width: 50px;
+  width: 48px; /* Updated width */
   border-radius: 50%;
-  margin-right: 15px;
+  margin-right: 12px; /* Updated margin-right */
 }
 
 .recent-posts .post-author {
   font-weight: 600;
-  margin-bottom: 5px;
+  margin-bottom: 4px; /* Updated margin-bottom */
 }
 
 .recent-posts .post-date {
   font-size: 14px;
-  color: #3c3c3c;
+  color: #555; /* Updated text color */
   margin-bottom: 0;
 }
-
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
@@ -1720,7 +1713,7 @@ section {
 
 .contact .info-item {
   width: 100%;
-  background-color: #009282;
+  background-color: #920000;
   margin-bottom: 20px;
   padding: 20px;
   border-radius: 10px;
@@ -1780,7 +1773,7 @@ section {
 .contact .php-email-form .error-message {
   display: none;
   color: #fff;
-  background: #df1529;
+  background: #2215df;
   text-align: left;
   padding: 15px;
   font-weight: 600;
@@ -1793,7 +1786,7 @@ section {
 .contact .php-email-form .sent-message {
   display: none;
   color: #fff;
-  background: #059652;
+  background: #058096;
   text-align: center;
   padding: 15px;
   font-weight: 600;
@@ -1813,7 +1806,7 @@ section {
   width: 24px;
   height: 24px;
   margin: 0 10px -6px 0;
-  border: 3px solid #059652;
+  border: 3px solid #960505;
   border-top-color: #fff;
   animation: animate-loading 1s linear infinite;
 }
@@ -1870,7 +1863,7 @@ section {
 .hero {
   width: 100%;
   position: relative;
-  background: linear-gradient(to bottom, #f75959,#f35587);
+  background: linear-gradient(to bottom, #5969f7, #556df3);
   padding: 60px 0 0 0;
 }
 
@@ -1921,7 +1914,7 @@ section {
 }
 
 .hero .btn-watch-video i {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(29, 62, 209, 0.5);
   font-size: 32px;
   transition: 0.3s;
   line-height: 0;
@@ -1963,7 +1956,7 @@ section {
   padding: 60px 30px;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(to bottom, #ff8b8b,#ffbed3);
+  background: linear-gradient(to bottom, #8bffff, #becaff);
   box-shadow: 0 0 29px 0 rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease-in-out;
   border-radius: 8px;
@@ -1991,16 +1984,16 @@ section {
   transition: all 0.3s ease-in-out;
   font-size: 48px;
   line-height: 1;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(43, 54, 153, 0.6);
 }
 
 .hero .icon-box:hover {
-  background: #ffb6ee;
+  background: rgb(182, 195, 255);
 }
 
 .hero .icon-box:hover .title a,
 .hero .icon-box:hover .icon {
-  color: #ffffff;
+  color: rgb(255, 255, 255);
 }
 
 /*--------------------------------------------------------------
@@ -2035,7 +2028,7 @@ section {
 .blog .blog-pagination li.active,
 .blog .blog-pagination li:hover {
   background: var(--color-primary);
-  color: #fff;
+  color: rgb(255, 255, 255);
 }
 
 .blog .blog-pagination li.active a,
@@ -2095,7 +2088,7 @@ section {
 
 .blog .posts-list .post-date {
   font-size: 14px;
-  color: #3c3c3c;
+  color: #5c5454;
   margin-bottom: 0;
 }
 
@@ -2200,7 +2193,7 @@ section {
 }
 
 .blog .blog-details .meta-bottom i {
-  color: #555555;
+  color: #ffffff;
   display: inline;
 }
 
@@ -2280,7 +2273,7 @@ section {
 
 .blog .post-author p {
   font-style: italic;
-  color: rgba(108, 117, 125, 0.8);
+  color: rgba(255, 255, 255, 0.8);
   margin-bottom: 0;
 }
 
@@ -2346,7 +2339,7 @@ section {
 }
 
 .blog .sidebar .search-form form button:hover {
-  background: rgba(0, 131, 116, 0.8);
+  background: rgba(131, 0, 0, 0.8);
 }
 
 .blog .sidebar .categories ul {
@@ -2419,7 +2412,7 @@ section {
 }
 
 .blog .sidebar .tags ul a {
-  color: #555555;
+  color: #ffffff;
   font-size: 14px;
   padding: 6px 20px;
   margin: 0 6px 8px 0;
@@ -2524,7 +2517,7 @@ section {
 
 .blog .comments .reply-form input:focus {
   box-shadow: none;
-  border-color: rgba(0, 131, 116, 0.8);
+  border-color: rgba(131, 0, 0, 0.8);
 }
 
 .blog .comments .reply-form textarea {
@@ -2535,7 +2528,7 @@ section {
 
 .blog .comments .reply-form textarea:focus {
   box-shadow: none;
-  border-color: rgba(0, 131, 116, 0.8);
+  border-color: rgba(10, 255, 226, 0.8);
 }
 
 .blog .comments .reply-form .form-group {
@@ -2550,7 +2543,7 @@ section {
 }
 
 .blog .comments .reply-form .btn-primary:hover {
-  background-color: rgba(248, 90, 64, 0.8);
+  background-color: rgba(64, 138, 248, 0.8);
 }
 
 /*--------------------------------------------------------------
@@ -2558,7 +2551,7 @@ section {
 --------------------------------------------------------------*/
 .footer {
   font-size: 14px;
-  background: linear-gradient(to bottom, #f75959,#f35587);
+  background: linear-gradient(to right bottom, #6574f6, #9f85fd);
   padding: 50px 0;
   color: white;
 }
@@ -2669,12 +2662,12 @@ section {
 }
 
 .gradient-custom {
-/* fallback for old browsers */
-background: #f6d365;
+  /* fallback for old browsers */
+  background: #6f65f6;
 
-/* Chrome 10-25, Safari 5.1-6 */
-background: -webkit-linear-gradient(to right bottom, rgba(246, 211, 101, 1), rgba(253, 160, 133, 1));
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right bottom, rgb(101, 224, 246), rgb(133, 145, 253));
 
-/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-background: linear-gradient(to right bottom, rgba(246, 211, 101, 1), rgba(253, 160, 133, 1))
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right bottom, rgb(101, 164, 246), rgb(145, 133, 253))
 }

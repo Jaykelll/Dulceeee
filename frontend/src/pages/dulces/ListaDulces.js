@@ -70,7 +70,7 @@ const Listadulces = () => {
             <header id="header" className="header d-flex align-items-center">
                 <div className="container-fluid container-xl d-flex align-items-center justify-content-between">
                     <Link to="/admin" className="logo d-flex align-items-center">
-                        <h1>Mi Dulce Online<span>.</span></h1>
+                        <h1>Mi Dulce Online<span>🍬</span></h1>
                     </Link>
                     <nav id="navbar" className="navbar">
                         <ul>
